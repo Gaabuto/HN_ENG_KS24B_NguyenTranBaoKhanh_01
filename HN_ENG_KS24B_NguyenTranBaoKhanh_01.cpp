@@ -2,6 +2,15 @@
 
 int main(){
 	int a,i,j,choose,ar[a];
+	int PerfectNumber(int n){
+    int sum = 0;
+    for (int i=1;i<=n/2; i++) {
+        if (n%i== 0) {
+            sum += i;
+        }
+    }
+    return (sum==n&&n!= 0);
+}
 	do{
 		
 		
@@ -30,23 +39,16 @@ int main(){
 				printf("arr[%d]=%d  ",i,ar[i]);
 }break;
 		case 3:
-			int count =0,perfectNum,sum = 0;
-			for(i = 1; i < a/2; i ++){
-				if ( a % i == 0){
-					sum += i;
-				}
-			}
-			return 
-			(sum== a&&a!= 0);
-}
-			for ( i = 0; i < a; i ++){
-				if (perfectNum(ar[i])){
-					count ++;
-				}
-			}
-			printf("so luong so hoan hao trong so la %d", count);
-			break;
-
+		 count=0;
+                for (int i=0;i<n;i++) {
+                    if (PerfectNumber(arr[i])) {
+                        count++;
+                    }
+                }
+                printf("So luong so hoan hao trong mang la: %d\n", count);
+                break;
+			
+		
 
 									
   case 6:
